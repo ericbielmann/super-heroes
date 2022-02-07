@@ -1,0 +1,5 @@
+FROM node:alpine    
+EXPOSE 3000
+COPY mock-heroes.json /opt/mock-heroes.json
+RUN npm i -g json-server
+CMD ["json-server", "-H", "0.0.0.0", "/opt/mock-heroes.json"]
