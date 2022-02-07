@@ -1,8 +1,85 @@
-<h2>My Heroes</h2>
-<ul class="heroes">
-  <li *ngFor="let hero of heroes">
-    <a routerLink="/detail/{{hero.id}}">
-      <span class="badge">{{hero.id}}</span> {{hero.name}}
-    </a>
-  </li>
-</ul>
+<div class="title-group">
+  <h1 class="mat-h1">Heroes List</h1>
+  <mat-divider fxFlex="1 0"></mat-divider>
+  <button
+    mat-raised-button
+    color="primary"
+    class="push-right"
+    routerLink="/detail/0"
+  >
+    Add
+  </button>
+</div>
+
+<div class="container" *ngIf="heroes.length > 0">
+  <div class="mat-elevation">
+    <mat-table [dataSource]="dataSource" matSort>
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>
+          Id
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element" data-label="id">
+          {{ element.id }}
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="superHeroName">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>
+          Superhero Name
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element" data-label="superHeroName">
+          {{ element.superHeroName }}
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="realName">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>
+          Real Name
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element" data-label="realName">
+          {{ element.realName }}
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="powers">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>
+          Powers
+        </mat-header-cell>
+        <mat-cell
+          *matCellDef="let element"
+          class="truncate-cell"
+          data-label="powers"
+        >
+          {{ element.powers }}
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="action">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>
+          Action
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element; let i = index" data-label="action">
+          <button
+            mat-raised-button
+            color="primary"
+            class="push-right"
+            routerLink="/detail/{{ element.id }}"
+          >
+            Edit
+          </button>
+          <button mat-raised-button color="accent" (click)="deleteHero(element.id)">
+            Delete
+          </button>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </mat-table>
+
+    <mat-paginator
+      showFirstLastButtons
+      [pageSizeOptions]="[5, 10, 20]"
+    ></mat-paginator>
+  </div>
+</div>

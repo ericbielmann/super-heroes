@@ -1,30 +1,34 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { HeroesComponent } from './heroes/heroes.component';
-import { MessagesComponent } from './messages/messages.component';
-
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from './shared/shared.module';
+import { LoaderComponent } from './core/loader/loader.component';
+import { LoaderService } from './shared/services/loader.service';
+import { LoaderInterceptor } from './core/http-interceptors/loader-interceptor.service';
+import { DelayInterceptor } from './core/http-interceptors/delay-interceptor.service';
 
 @NgModule({
   imports: [
     BrowserModule,
-    FormsModule,
+    HttpClientModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedModule.forRoot(),
   ],
   declarations: [
     AppComponent,
     DashboardComponent,
-    HeroesComponent,
-    HeroDetailComponent,
-    MessagesComponent
+    LoaderComponent,
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent],
+  providers: [
+    LoaderService,
+    { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: DelayInterceptor, multi: true },
+  ],
 })
-export class AppModule { }
+export class AppModule {}

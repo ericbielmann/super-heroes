@@ -1,0 +1,168 @@
+{
+  "recentlyViewed": [
+    {
+      "id": 14,
+      "superHeroName": "The Vision",
+      "realName": "Victor Shade",
+      "description": "The android called Vision defies physics and fights as an Avenger with the power of density manipulation and his flawless computer brain.",
+      "powers": "Density Shifting, Intangibility, Photokinesis, Remote Interfacing (with other computer systems)"
+    },
+    {
+      "id": 11,
+      "superHeroName": "Spider-Man",
+      "realName": "Peter Parker",
+      "description": "Bitten by a radioactive spider, Peter Parker’s arachnid abilities give him amazing powers he uses to help others, while his personal life continues to offer plenty of obstacles.",
+      "powers": "Superhuman Strength, Superhuman Speed, Superhuman Reflexes, Superhuman Durability"
+    },
+    {
+      "superHeroName": "Ant-Man and the wasp",
+      "realName": "Scott Lang22",
+      "description": "Overcoming his criminal past, Scott Lang follows in the tiny, yet mighty, footsteps of his predecessor as the size-changing hero known as Ant-Man!",
+      "powers": "Size and Shape Alteration, Superhuman Intelligence, Superhuman Strength",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "superHeroName": "Black Panther",
+      "realName": "T´Challa",
+      "description": "T’Challa is the king of the secretive and highly advanced African nation of Wakanda - as well as the powerful warrior known as the Black Panther.",
+      "powers": "Heightened Senses, Night Vision, Hand-to-Hand Combat, Superhuman Strength"
+    },
+    {
+      "firstName": null,
+      "superHeroName": "BATMAN",
+      "realName": "bruce wayne",
+      "description": "rico",
+      "powers": "rico",
+      "id": 19
+    }
+  ],
+  "heroes": [
+    {
+      "superHeroName": "ANT-MAN",
+      "realName": "Scott Lang",
+      "description": "Overcoming his criminal past, Scott Lang follows in the tiny, yet mighty, footsteps of his predecessor as the size-changing hero known as Ant-Man!",
+      "powers": "Size and Shape Alteration, Superhuman Intelligence, Superhuman Strength",
+      "id": 1
+    },
+    {
+      "superHeroName": "Black Panther",
+      "realName": "T´Challa",
+      "description": "T’Challa is the king of the secretive and highly advanced African nation of Wakanda - as well as the powerful warrior known as the Black Panther.",
+      "powers": "Heightened Senses, Night Vision, Hand-to-Hand Combat, Superhuman Strength",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "superHeroName": "Black Widow",
+      "realName": "Natasha Romanova",
+      "description": "Despite super spy Natasha Romanoff’s checkered past, she’s become one of S.H.I.E.L.D.’s most deadly assassins and a frequent member of the Avengers.",
+      "powers": "Slowed Aging, Superhuman Durability"
+    },
+    {
+      "id": 4,
+      "superHeroName": "Captin America",
+      "realName": "Steve Rogers",
+      "description": "Recipient of the Super Soldier serum, World War II hero Steve Rogers fights for American ideals as one of the world’s mightiest heroes and the leader of the Avengers.",
+      "powers": "Superhuman Agility, Superhuman Stamina, Superhuman Durability"
+    },
+    {
+      "id": 5,
+      "superHeroName": "Doctor Strange",
+      "realName": "Stephen Strange",
+      "description": "Formerly a renowned surgeon, Doctor Stephen Strange now serves as the Sorcerer Supreme—Earth’s foremost protector against magical and mystical threats.",
+      "powers": "Magic, Martial Artist, Energy Manipulation, Teleportation, Chronokinesis"
+    },
+    {
+      "id": 6,
+      "superHeroName": "Gamora",
+      "realName": "Gamora",
+      "description": "Raised by Thanos to be a living weapon, Gamora seeks redemption as a member of the Guardians of the Galaxy, putting her extraordinary fighting abilities to good use.",
+      "powers": "Precognition, Superhuman Durability, Superhuman Speed, Superhuman Strength"
+    },
+    {
+      "id": 7,
+      "superHeroName": "Hawkeye",
+      "realName": "Client Barton",
+      "description": "A master marksman and longtime friend of the Black Widow, Clint Barton serves as the Avengers’ amazing archer.",
+      "powers": "Hand-to-Hand Combat, Superior Marksmanship"
+    },
+    {
+      "id": 8,
+      "superHeroName": "Hulk",
+      "realName": "Bruce Banner",
+      "description": "Dr. Bruce Banner lives a life caught between the soft-spoken scientist",
+      "powers": "Healing Factor, Superhuman Durability, Superhuman Strength"
+    },
+    {
+      "id": 9,
+      "superHeroName": "Iron Man",
+      "realName": "Tony Stark",
+      "description": "Genius. Billionaire. Philanthropist. Tony Stark´s confidence is only matched by his high-flying abilities as the hero called Iron Man.",
+      "powers": "Heightened Senses, Superhuman Strength, Regeneration, Genius Intelligence"
+    },
+    {
+      "id": 10,
+      "superHeroName": "Scarlet Witch",
+      "realName": "Wanda Maximoff",
+      "description": "A powerful mutant sorceress, Wanda Maximoff has been a master of the mystical arts for both the X-Men and the Avengers.",
+      "powers": "Illumination, Magic, Matter Transmutation, Nexus Being, Powers of Life and Death"
+    },
+    {
+      "superHeroName": "Spider-Man",
+      "realName": "Peter Parker",
+      "description": "Bitten by a radioactive spider, Peter Parker’s arachnid abilities give him amazing powers he uses to help others, while his personal life continues to offer plenty of obstacles.",
+      "powers": "Superhuman Strength, Superhuman Speed, Superhuman Reflexes, Superhuman Durability",
+      "id": 11
+    },
+    {
+      "id": 12,
+      "superHeroName": "Stard Lord",
+      "realName": "Peter Quill",
+      "description": "Leader of the Guardians of the Galaxy, Peter Quill, known as Star-Lord, brings a sassy sense of humor while protecting the universe from any and all threats.",
+      "powers": "Force Field, Healing Factor, Superhuman Strength, Superior Marksmanship, Sword-Fighting"
+    },
+    {
+      "id": 13,
+      "superHeroName": "Thor",
+      "realName": "Thor Odinson",
+      "description": "The son of Odin uses his mighty abilities as the God of Thunder to protect his home Asgard and planet Earth alike.",
+      "powers": "Odinpower, Warrior´s Madness (Berserker Rage), Superhuman Strength, Superhuman Durability"
+    },
+    {
+      "superHeroName": "The Vision",
+      "realName": "Victor Shade",
+      "description": "The android called Vision defies physics and fights as an Avenger with the power of density manipulation and his flawless computer brain.",
+      "powers": "Density Shifting, Intangibility, Photokinesis, Remote Interfacing (with other computer systems)",
+      "id": 14
+    },
+    {
+      "id": 15,
+      "superHeroName": "Winter Soldier",
+      "realName": "Bucky Barnes",
+      "description": "Bucky Barnes was brought back from his supposed death to be a brainwashed assassin called the Winter Soldier. Reformed by his friends, he now fights alongside the Avengers.",
+      "powers": "Unarmed Combat, Superhuman Strength, Marksman"
+    },
+    {
+      "superHeroName": "Ant-Man33",
+      "realName": "Scott Lang33",
+      "description": "Overcoming his criminal past, Scott Lang follows in the tiny, yet mighty, footsteps of his predecessor as the size-changing hero known as Ant-Man!",
+      "powers": "Size and Shape Alteration, Superhuman Intelligence, Superhuman Strength",
+      "id": 16
+    },
+    {
+      "superHeroName": "test eb 22",
+      "realName": "test eb 22 bielmann",
+      "description": "test eb 22",
+      "powers": "test eb 22",
+      "id": 17
+    },
+    {
+      "superHeroName": "TEST NEW HERO",
+      "realName": "hero ",
+      "description": "hero",
+      "powers": "hero",
+      "id": 18
+    }
+  ]
+}

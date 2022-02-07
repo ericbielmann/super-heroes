@@ -1,54 +1,129 @@
 /* HeroesComponent's private CSS styles */
 .heroes {
-    margin: 0 0 2em 0;
-    list-style-type: none;
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+.heroes li {
+  position: relative;
+  cursor: pointer;
+}
+
+.heroes li:hover {
+  left: 0.1em;
+}
+
+.heroes a {
+  color: #333;
+  text-decoration: none;
+  background-color: #eee;
+  margin: 0.5em;
+  padding: 0.3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+}
+
+.heroes a:hover {
+  color: #2c3a41;
+  background-color: #e6e6e6;
+}
+
+.heroes a:active {
+  background-color: #525252;
+  color: #fafafa;
+}
+
+.title-group {
+  display: flex;
+  align-items: baseline;
+
+  button.push-right {
+    margin-left: auto;
+  }
+}
+
+.heroes .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #405061;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  min-width: 16px;
+  text-align: right;
+  margin-right: 0.8em;
+  border-radius: 4px 0 0 4px;
+}
+
+.mat-cell.truncate-cell {
+  max-width: 36rem; /* feel free to include any other value */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 960px) {
+  .mat-table {
+    border: 0;
+    vertical-align: middle
+  }
+
+  .mat-table caption {
+    font-size: 1em;
+  }
+  
+    // Enable this to hide header
+  .mat-table .mat-header-cell {
+    
+    border: 10px solid;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
     padding: 0;
-    width: 15em;
-  }
-  .heroes li {
-    position: relative;
-    cursor: pointer;
+    position: absolute;
+    width: 1px;
   }
   
-  .heroes li:hover {
-    left: .1em;
-  }
-  
-  .heroes a {
-    color: #333;
-    text-decoration: none;
-    background-color: #EEE;
-    margin: .5em;
-    padding: .3em 0;
-    height: 1.6em;
-    border-radius: 4px;
+  .mat-table .mat-row {
+    border-bottom: 5px solid #ddd;
     display: block;
-    width: 100%;
   }
-  
-  .heroes a:hover {
-    color: #2c3a41;
-    background-color: #e6e6e6;
-  }
-  
-  .heroes a:active {
-    background-color: #525252;
-    color: #fafafa;
-  }
-  
-  .heroes .badge {
-    display: inline-block;
-    font-size: small;
-    color: white;
-    padding: 0.8em 0.7em 0 0.7em;
-    background-color:#405061;
-    line-height: 1em;
-    position: relative;
-    left: -1px;
-    top: -4px;
-    height: 1.8em;
-    min-width: 16px;
+  /*
+  .mat-table .mat-row:nth-child(even) {background: #CCC}
+  .mat-table .mat-row:nth-child(odd) {background: #FFF}
+  */
+  .mat-table .mat-cell {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 1em;
     text-align: right;
-    margin-right: .8em;
-    border-radius: 4px 0 0 4px;
+    margin-right: 1rem;
+    font-weight: bold;
+    height:30px;
+    margin-bottom: 4%;
   }
+  .mat-table .mat-cell:before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-left: 1rem;
+    font-size: .85em;
+  }
+  .mat-table .mat-cell:last-child {
+    border-bottom: 0;
+  }
+    .mat-table .mat-cell:first-child {
+    margin-top: 4%;
+  }
+}

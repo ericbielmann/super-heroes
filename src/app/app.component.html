@@ -1,7 +1,24 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/heroes">Heroes</a>
-</nav>
-<router-outlet></router-outlet>
-<app-messages></app-messages>
+<mat-toolbar color="primary" class="header">
+  <span class="nav-tool-items">
+    <mat-icon (click)="sidenav.toggle()" class="hamburger">menu</mat-icon>
+  </span>
+  <div>{{title}}</div>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav [mode]="isBiggerScreen() ? 'over' : 'side'" [(opened)]="opened" [fixedInViewport]="true">
+    <mat-nav-list class="nav-list-items">
+      <a mat-list-item routerLinkActive="active" routerLink="/dashboard">
+        <mat-icon>add</mat-icon> Dashboard
+      </a>
+      <a mat-list-item routerLinkActive="active" routerLink="/heroes">
+        <mat-icon>format_list_bulleted</mat-icon> Heroes
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+    <app-loader></app-loader>
+  </mat-sidenav-content>
+</mat-sidenav-container>
