@@ -29,8 +29,6 @@ export class LoaderInterceptor implements HttpInterceptor {
   ): Observable<HttpEvent<any>> {
     this.requests.push(req);
 
-    console.log('No of requests--->' + this.requests.length);
-
     this.loaderService.isLoading.next(true);
     return new Observable((observer) => {
       const subscription = next.handle(req).subscribe((event) => {
@@ -39,7 +37,6 @@ export class LoaderInterceptor implements HttpInterceptor {
           observer.next(event);
         }
       });
-      // remove request from queue when cancelled
       return () => {
         this.removeRequest(req);
         subscription.unsubscribe();

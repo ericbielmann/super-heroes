@@ -5,11 +5,9 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   ViewChild,
-  AfterViewChecked,
   AfterViewInit,
   ElementRef,
 } from '@angular/core';
-import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import {
@@ -23,7 +21,6 @@ import { HeroService } from '../shared/hero.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from '../shared/confirm-dialog/confirm-dialog.component';
 import { Subject, takeUntil } from 'rxjs';
-import { MatInput } from '@angular/material/input';
 
 @Component({
   selector: 'app-hero-detail',
