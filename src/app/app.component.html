@@ -2,11 +2,16 @@
   <span class="nav-tool-items">
     <mat-icon (click)="sidenav.toggle()" class="hamburger">menu</mat-icon>
   </span>
-  <div>{{title}}</div>
+  <div>{{ title }}</div>
 </mat-toolbar>
 
 <mat-sidenav-container>
-  <mat-sidenav #sidenav [mode]="isBiggerScreen() ? 'over' : 'side'" [(opened)]="opened" [fixedInViewport]="true">
+  <mat-sidenav
+    #sidenav
+    [mode]="navMode"
+    [(opened)]="opened"
+    [fixedInViewport]="true"
+    >
     <mat-nav-list class="nav-list-items">
       <a mat-list-item routerLinkActive="active" routerLink="/dashboard">
         <mat-icon>add</mat-icon> Dashboard

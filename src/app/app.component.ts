@@ -1,4 +1,5 @@
 import { Component, HostListener, ViewChild } from '@angular/core';
+import { MatDrawerMode, MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
@@ -6,30 +7,26 @@ import { Component, HostListener, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'Tour of Heroes';
+  @ViewChild('sidenav') sidenav: MatSidenav;
+  navMode: MatDrawerMode = 'side';
+  title = 'Heroes';
   opened = false;
 
   ngOnInit() {
+    if (window.innerWidth < 768) {
+      this.navMode = 'over';
+    }
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     if (event.target.innerWidth < 768) {
+      this.navMode = 'over';
       this.opened = false;
-    } else {
-      this.opened = true;
     }
-  }
-
-  isBiggerScreen() {
-    const width =
-      window.innerWidth ||
-      document.documentElement.clientWidth ||
-      document.body.clientWidth;
-    if (width < 768) {
-      return true;
-    } else {
-      return false;
+    if (event.target.innerWidth > 768) {
+      this.navMode = 'side';
+      this.opened = true;
     }
   }
 }
