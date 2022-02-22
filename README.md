@@ -2,9 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
-## Development server
+## Frontend development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+### Backend development server
+
+- Since this application use mock server,run `json-server --watch mock-heroes.json` to start the backend.
+- The backend application should be running on [http://localhost:3000](http://localhost:3000).
 
 ## Code scaffolding
 
