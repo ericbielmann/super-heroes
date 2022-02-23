@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { catchError, Observable, retry, throwError } from 'rxjs';
-import { Hero } from './models/hero';
+import { Hero } from '../models/hero';
 import {
   HttpClient,
   HttpErrorResponse,

@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { Hero } from '../shared/models/hero';
-import { HeroService } from '../shared/hero.service';
+import { HeroService } from '../shared/services/hero.service';
 
 @Component({
   selector: 'app-dashboard',

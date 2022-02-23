@@ -17,7 +17,7 @@ import {
   FormControl,
 } from '@angular/forms';
 import { Hero } from '../shared/models/hero';
-import { HeroService } from '../shared/hero.service';
+import { HeroService } from '../shared/services/hero.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from '../shared/confirm-dialog/confirm-dialog.component';
 import { Subject, takeUntil } from 'rxjs';

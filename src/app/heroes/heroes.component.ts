@@ -8,7 +8,7 @@ import {
   ChangeDetectorRef,
 } from '@angular/core';
 import { Hero } from '../shared/models/hero';
-import { HeroService } from '../shared/hero.service';
+import { HeroService } from '../shared/services/hero.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { Subject, takeUntil, tap } from 'rxjs';

@@ -2,7 +2,7 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AngularMaterialModule } from './material.module';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
-import { HeroService } from './hero.service';
+import { HeroService } from './services/hero.service';
 import { UppercaseDirective } from './directives/uppercase.directive';
 
 @NgModule({
